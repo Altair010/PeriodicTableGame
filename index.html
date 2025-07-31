@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <title>Peroidic table game</title>
+</head>
+
+<body>
+
+
+    <!-- navbar  -->
+    <div class="navbar">
+        <div id="navFirst">
+            <div id="time">Time: 30 </div>
+            <!-- <div id="score">SCORE: 0</div> -->
+            <li id="Level" style="list-style-type: none; padding-left: 20px;">level: 1</li>
+        </div>
+
+        <ul>
+            <!-- <li id="Level" >level: 1</li> -->
+          
+            <a href="learnPer.html">
+                  <button id="learn">Learn</button>
+            </a>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Element Bank -->
+
+    <div class="element-bank" id="level-1">
+        <div class="element" draggable="true" data-symbol="Li">Li</div>
+        <div class="element" draggable="true" data-symbol="He">He</div>
+        <div class="element" draggable="true" data-symbol="O">O</div>
+        <div class="element" draggable="true" data-symbol="H">H</div>
+        <div class="element" draggable="true" data-symbol="B">B</div>
+        <div class="element" draggable="true" data-symbol="N">N</div>
+        <div class="element" draggable="true" data-symbol="F">F</div>
+        <div class="element" draggable="true" data-symbol="Ne">Ne</div>
+        <div class="element" draggable="true" data-symbol="C">C</div>
+        <div class="element" draggable="true" data-symbol="Be">Be</div>
+        <!-- Add more draggable elements -->
+    </div>
+
+
+    <!-- second level  -->
+    <div class="element-bank" id="level-2">
+        <div class="element" draggable="true" data-symbol="H">H</div>
+        <div class="element" draggable="true" data-symbol="He">He</div>
+        <div class="element" draggable="true" data-symbol="Li">Li</div>
+        <div class="element" draggable="true" data-symbol="Be">Be</div>
+        <div class="element" draggable="true" data-symbol="B">B</div>
+        <div class="element" draggable="true" data-symbol="C">C</div>
+        <div class="element" draggable="true" data-symbol="N">N</div>
+        <div class="element" draggable="true" data-symbol="O">O</div>
+        <div class="element" draggable="true" data-symbol="F">F</div>
+        <div class="element" draggable="true" data-symbol="Ne">Ne</div>
+        <div class="element" draggable="true" data-symbol="Na">Na</div>
+        <div class="element" draggable="true" data-symbol="Mg">Mg</div>
+        <div class="element" draggable="true" data-symbol="Al">Al</div>
+        <div class="element" draggable="true" data-symbol="Si">Si</div>
+        <div class="element" draggable="true" data-symbol="P">P</div>
+        <div class="element" draggable="true" data-symbol="S">S</div>
+        <div class="element" draggable="true" data-symbol="Cl">Cl</div>
+        <div class="element" draggable="true" data-symbol="Ar">Ar</div>
+        <div class="element" draggable="true" data-symbol="K">K</div>
+        <div class="element" draggable="true" data-symbol="Ca">Ca</div>
+        <div class="element" draggable="true" data-symbol="Sc">Sc</div>
+        <div class="element" draggable="true" data-symbol="Ti">Ti</div>
+        <div class="element" draggable="true" data-symbol="V">V</div>
+        <div class="element" draggable="true" data-symbol="Cr">Cr</div>
+        <div class="element" draggable="true" data-symbol="Mn">Mn</div>
+        <div class="element" draggable="true" data-symbol="Fe">Fe</div>
+        <div class="element" draggable="true" data-symbol="Co">Co</div>
+        <div class="element" draggable="true" data-symbol="Ni">Ni</div>
+        <div class="element" draggable="true" data-symbol="Cu">Cu</div>
+        <div class="element" draggable="true" data-symbol="Zn">Zn</div>
+    </div>
+
+
+
+    <div class="hint">
+        <div></div>
+    </div>
+
+    <!-- Periodic Table Grid -->
+    <div class="periodic-table">
+        <!-- Empty grid slots with correct drop positions using data-symbol -->
+        <div class="element-box" id="blue" data-symbol="H" style="grid-column: 1; grid-row: 1;">1</div>
+        <div class="element-box" data-symbol="He" style="grid-column: 18; grid-row: 1;">2</div>
+        <div class="element-box" id="orange" data-symbol="Li" style="grid-column: 1; grid-row: 2;">3</div>
+        <div class="element-box" id="yellow" data-symbol="Be" style="grid-column: 2; grid-row: 2;">4</div>
+        <div class="element-box" id="skyBlue" data-symbol="B" style="grid-column: 13; grid-row: 2;">5</div>
+        <div class="element-box" id="blue" data-symbol="C" style="grid-column: 14; grid-row: 2;">6</div>
+        <div class="element-box" id="blue" data-symbol="N" style="grid-column: 15; grid-row: 2;">7</div>
+        <div class="element-box" id="blue" data-symbol="O" style="grid-column: 16; grid-row: 2;">8</div>
+        <div class="element-box" id="blue" data-symbol="F" style="grid-column: 17; grid-row: 2;">9</div>
+        <div class="element-box" id="violet" data-symbol="Ne" style="grid-column:18; grid-row: 2;">10</div>
+
+        <!-- 3rd row -->
+        <div class="element-box" id="orange" data-symbol="Na" style="grid-column: 1; grid-row: 3;">11</div>
+        <div class="element-box" id="yellow" data-symbol="Mg" style="grid-column: 2; grid-row: 3;">12</div>
+        <div class="element-box" id="green" data-symbol="Al" style="grid-column: 13; grid-row: 3;">13</div>
+        <div class="element-box" id="skyBlue" data-symbol="Si" style="grid-column: 14; grid-row: 3;">14</div>
+        <div class="element-box" id="blue" data-symbol="P" style="grid-column: 15; grid-row: 3;">15</div>
+        <div class="element-box" id="blue" data-symbol="S" style="grid-column: 16; grid-row: 3;">16</div>
+        <div class="element-box" id="blue" data-symbol="Cl" style="grid-column: 17; grid-row: 3;">17</div>
+        <div class="element-box" id="violet" data-symbol="Al" style="grid-column: 18; grid-row: 3;">18</div>
+
+        <!-- 4th row  -->
+        <div class="element-box" id="orange" data-symbol="K" style="grid-column: 1; grid-row: 4;">19</div>
+        <div class="element-box" id="yellow" data-symbol="Ca" style="grid-column: 2; grid-row: 4;">20</div>
+        <div class="element-box" data-symbol="Sc" style="grid-column: 3; grid-row: 4;">21</div>
+        <div class="element-box" data-symbol="Ti" style="grid-column: 4; grid-row: 4;">22</div>
+        <div class="element-box" data-symbol="V" style="grid-column: 5; grid-row: 4;">23</div>
+        <div class="element-box" data-symbol="Cr" style="grid-column: 6; grid-row: 4;">24</div>
+        <div class="element-box" data-symbol="Mn" style="grid-column: 7; grid-row: 4;">25</div>
+        <div class="element-box" data-symbol="Fe" style="grid-column: 8; grid-row: 4;">26</div>
+        <div class="element-box" data-symbol="Co" style="grid-column: 9; grid-row: 4;">27</div>
+        <div class="element-box" data-symbol="Ni" style="grid-column: 10; grid-row: 4;">28</div>
+        <div class="element-box" data-symbol="Cu" style="grid-column: 11; grid-row: 4;">29</div>
+        <div class="element-box" data-symbol="Zn" style="grid-column: 12; grid-row: 4;">30</div>
+        <div class="element-box" id="green" data-symbol="Ga" style="grid-column: 13; grid-row: 4;">31</div>
+        <div class="element-box" id="skyBlue" data-symbol="Ge" style="grid-column: 14; grid-row: 4;">32</div>
+        <div class="element-box" id="skyBlue" data-symbol="As" style="grid-column: 15; grid-row: 4;">33</div>
+        <div class="element-box" id="blue" data-symbol="Se" style="grid-column: 16; grid-row: 4;">34</div>
+        <div class="element-box" id="blue" data-symbol="Br" style="grid-column: 17; grid-row: 4;">35</div>
+        <div class="element-box" id="violet" data-symbol="Kr" style="grid-column: 18; grid-row: 4;">36</div>
+
+        <!-- 5th row  -->
+        <div class="element-box" id="orange" data-symbol="Rb" style="grid-column: 1; grid-row: 5;">37</div>
+        <div class="element-box" id="yellow" data-symbol="Sr" style="grid-column: 2; grid-row: 5;">38</div>
+        <div class="element-box" data-symbol="Y" style="grid-column: 3; grid-row: 5;">39</div>
+        <div class="element-box" data-symbol="Zr" style="grid-column: 4; grid-row: 5;">40</div>
+        <div class="element-box" data-symbol="Nb" style="grid-column: 5; grid-row: 5;">41</div>
+        <div class="element-box" data-symbol="Mo" style="grid-column: 6; grid-row: 5;">42</div>
+        <div class="element-box" data-symbol="Tc" style="grid-column: 7; grid-row: 5;">43</div>
+        <div class="element-box" data-symbol="Ru" style="grid-column: 8; grid-row: 5;">44</div>
+        <div class="element-box" data-symbol="Rh" style="grid-column: 9; grid-row: 5;">45</div>
+        <div class="element-box" data-symbol="Pd" style="grid-column: 10; grid-row: 5;">46</div>
+        <div class="element-box" data-symbol="Ag" style="grid-column: 11; grid-row: 5;">47</div>
+        <div class="element-box" data-symbol="Cd" style="grid-column: 12; grid-row: 5;">48</div>
+        <div class="element-box" id="green" data-symbol="In" style="grid-column: 13; grid-row: 5;">49</div>
+        <div class="element-box" id="green" data-symbol="Sn" style="grid-column: 14; grid-row: 5;">50</div>
+        <div class="element-box" id="skyBlue" data-symbol="Sb" style="grid-column: 15; grid-row: 5;">51</div>
+        <div class="element-box" id="skyBlue" data-symbol="Te" style="grid-column: 16; grid-row: 5;">52</div>
+        <div class="element-box" id="blue" data-symbol="I" style="grid-column: 17; grid-row: 5;">53</div>
+        <div class="element-box" id="violet" data-symbol="Xe" style="grid-column: 18; grid-row: 5;">54</div>
+
+        <!-- 6th row  -->
+        <div class="element-box" id="orange" data-symbol="Cs" style="grid-column: 1; grid-row: 6;">55</div>
+        <div class="element-box" id="yellow" data-symbol="Ba" style="grid-column: 2; grid-row: 6;">56</div>
+        <!-- <div class="element-box" data-symbol="." style="grid-column: 3; grid-row: 6;"></div> -->
+        <div class="element-box" data-symbol="Hf" style="grid-column: 4; grid-row: 6;">72</div>
+        <div class="element-box" data-symbol="Ta" style="grid-column: 5; grid-row: 6;">73</div>
+        <div class="element-box" data-symbol="W" style="grid-column: 6; grid-row: 6;">74</div>
+        <div class="element-box" data-symbol="Re" style="grid-column: 7; grid-row: 6;">75</div>
+        <div class="element-box" data-symbol="Os" style="grid-column: 8; grid-row: 6;">76</div>
+        <div class="element-box" data-symbol="Ir" style="grid-column: 9; grid-row: 6;">77</div>
+        <div class="element-box" data-symbol="Pt" style="grid-column: 10; grid-row: 6;">78</div>
+        <div class="element-box" data-symbol="Au" style="grid-column: 11; grid-row: 6;">79</div>
+        <div class="element-box" data-symbol="Hg" style="grid-column: 12; grid-row: 6;">80</div>
+        <div class="element-box" id="green" data-symbol="In" style="grid-column: 13; grid-row: 6;">81</div>
+        <div class="element-box" id="green" data-symbol="Pb" style="grid-column: 14; grid-row: 6;">82</div>
+        <div class="element-box" id="green" data-symbol="Bi" style="grid-column: 15; grid-row: 6;">83</div>
+        <div class="element-box" id="green" data-symbol="Po" style="grid-column: 16; grid-row: 6;">84</div>
+        <div class="element-box" id="blue" data-symbol="At" style="grid-column: 17; grid-row: 6;">85</div>
+        <div class="element-box" id="violet" data-symbol="Rn" style="grid-column: 18; grid-row: 6;">86</div>
+
+        <!-- 7th row  -->
+        <div class="element-box" id="orange" data-symbol="Fr" style="grid-column: 1; grid-row: 7;">87</div>
+        <div class="element-box" id="yellow" data-symbol="Ra" style="grid-column: 2; grid-row: 7;">88</div>
+        <!-- <div class="element-box" data-symbol="." style="grid-column: 3; grid-row: 7"></div> -->
+        <div class="element-box" data-symbol="Rf" style="grid-column: 4; grid-row: 7;">104</div>
+        <div class="element-box" data-symbol="Db" style="grid-column: 5; grid-row: 7;">105</div>
+        <div class="element-box" data-symbol="Sg" style="grid-column: 6; grid-row: 7;">106</div>
+        <div class="element-box" data-symbol="Bh" style="grid-column: 7; grid-row: 7;">107</div>
+        <div class="element-box" data-symbol="Hs" style="grid-column: 8; grid-row: 7;">108</div>
+        <div class="element-box" data-symbol="Mt" style="grid-column: 9; grid-row: 7;">109</div>
+        <div class="element-box" data-symbol="Ds" style="grid-column: 10; grid-row: 7;">110</div>
+        <div class="element-box" data-symbol="Rg" style="grid-column: 11; grid-row: 7;">111</div>
+        <div class="element-box" data-symbol="Cn" style="grid-column: 12; grid-row: 7;">112</div>
+        <div class="element-box" id="green" data-symbol="Nh" style="grid-column: 13; grid-row: 7;">113</div>
+        <div class="element-box" id="green" data-symbol="Fi" style="grid-column: 14; grid-row: 7;">114</div>
+        <div class="element-box" id="green" data-symbol="Mc" style="grid-column: 15; grid-row: 7;">115</div>
+        <div class="element-box" id="green" data-symbol="Lv" style="grid-column: 16; grid-row: 7;">116</div>
+        <div class="element-box" id="green" data-symbol="Ts" style="grid-column: 17; grid-row: 7;">117</div>
+        <div class="element-box" id="violet" data-symbol="Og" style="grid-column: 18; grid-row: 7;">118</div>
+
+
+
+        <!-- lanthanide -->
+
+        <div class="element-box" id="purple" data-symbol="La" style="grid-column: 3; grid-row: 10;">57</div>
+        <div class="element-box" id="purple" data-symbol="Ce" style="grid-column: 4; grid-row: 10;">58</div>
+        <div class="element-box" id="purple" data-symbol="Pr" style="grid-column: 5; grid-row: 10;">59</div>
+        <div class="element-box" id="purple" data-symbol="Nd" style="grid-column: 6; grid-row: 10;">60</div>
+        <div class="element-box" id="purple" data-symbol="Pm" style="grid-column: 7; grid-row: 10;">61</div>
+        <div class="element-box" id="purple" data-symbol="Sm" style="grid-column: 8; grid-row: 10;">62</div>
+        <div class="element-box" id="purple" data-symbol="Eu" style="grid-column: 9; grid-row: 10;">63</div>
+        <div class="element-box" id="purple" data-symbol="Gd" style="grid-column: 10; grid-row: 10;">64</div>
+        <div class="element-box" id="purple" data-symbol="Tb" style="grid-column: 11; grid-row: 10;">65</div>
+        <div class="element-box" id="purple" data-symbol="Dy" style="grid-column: 12; grid-row: 10;">66</div>
+        <div class="element-box" id="purple" data-symbol="Ho" style="grid-column: 13; grid-row: 10;">67</div>
+        <div class="element-box" id="purple" data-symbol="Er" style="grid-column: 14; grid-row: 10;">68</div>
+        <div class="element-box" id="purple" data-symbol="Tm" style="grid-column: 15; grid-row: 10;">69</div>
+        <div class="element-box" id="purple" data-symbol="Yb" style="grid-column: 16; grid-row: 10;">70</div>
+        <div class="element-box" id="purple" data-symbol="Lu" style="grid-column: 17; grid-row: 10;">71</div>
+
+        <!-- Actinide -->
+
+        <div class="element-box" id="pink" data-symbol="Ac" style="grid-column: 3; grid-row: 9;">89</div>
+        <div class="element-box" id="pink" data-symbol="Th" style="grid-column: 4; grid-row: 9;">90</div>
+        <div class="element-box" id="pink" data-symbol="Pa" style="grid-column: 5; grid-row: 9;">91</div>
+        <div class="element-box" id="pink" data-symbol="U" style="grid-column: 6; grid-row: 9;">92</div>
+        <div class="element-box" id="pink" data-symbol="Np" style="grid-column: 7; grid-row: 9;">93</div>
+        <div class="element-box" id="pink" data-symbol="Pu" style="grid-column: 8; grid-row: 9;">94</div>
+        <div class="element-box" id="pink" data-symbol="Am" style="grid-column: 9; grid-row: 9;">95</div>
+        <div class="element-box" id="pink" data-symbol="Cm" style="grid-column: 10; grid-row: 9;">96</div>
+        <div class="element-box" id="pink" data-symbol="Bk" style="grid-column: 11; grid-row: 9;">97</div>
+        <div class="element-box" id="pink" data-symbol="Cf" style="grid-column: 12; grid-row: 9;">98</div>
+        <div class="element-box" id="pink" data-symbol="Es" style="grid-column: 13; grid-row: 9;">99</div>
+        <div class="element-box" id="pink" data-symbol="Fm" style="grid-column: 14; grid-row: 9;">100</div>
+        <div class="element-box" id="pink" data-symbol="Md" style="grid-column: 15; grid-row: 9;">101</div>
+        <div class="element-box" id="pink" data-symbol="No" style="grid-column: 16; grid-row: 9;">102</div>
+        <div class="element-box" id="pink" data-symbol="Lr" style="grid-column: 17; grid-row: 9;">103</div>
+
+
+
+    </div>
+
+    <!-- <div class="btn" id="start">Start</div> -->
+    <!-- <div class="btn" id="submit">Submit_1</div> -->
+    <!-- //try -->
+    <button class="btn" id="start">
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+            </path>
+        </svg>
+
+
+        <div class="text">
+            Start
+        </div>
+
+    </button>
+
+    <button class="btn" id="submit">
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+            </path>
+        </svg>
+
+
+        <div class="text">
+            Submit
+        </div>
+
+    </button>
+
+
+    <div class="popup">
+        <div class="popup-content">
+
+            <div id="msg">
+                <h1 id="win">CONGRACULATIONS!</h1>
+                <h1 id="loss">Good luck next time !!</h1>
+            </div>
+
+            <div id="scoreMsg" style="font-size: 15px;">SCORE: </div>
+            <!-- <div id="timeMsg">Time Taken: </div> -->
+            <div id="TimOver"></div>
+
+
+
+            <div id="subBtnSec">
+                <!-- <div class="btn" id="closeBtn">Close</div> -->
+                <button class="btn" id="closeBtn" style="margin-top: 70px; margin-left: -20px;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+                        </path>
+                    </svg>
+
+
+                    <div class="text">
+                        Close
+                    </div>
+
+                </button>
+                <!-- <div class="btn" id="nextLev">Next Level</div> -->
+                <button class="btn" id="nextLev" style="margin-top: 20px; margin-left: -20px">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75">
+                        </path>
+                    </svg>
+
+
+                    <div class="text">
+                        Next-Level
+                    </div>
+
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
